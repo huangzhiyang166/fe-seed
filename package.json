@@ -4,7 +4,8 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --port 1111 --progress --colors --config ./webpack.config.dev.js --inline",
+    "server" : "json-server ./mock/db.json --config ./mock/mock.config.js --routes ./mock/routes.json",
+    "start": "webpack-dev-server --port 8000 --progress --colors --config ./webpack.config.dev.js --inline",
     "test": "gulp test",
     "release": "gulp release",
     "production": "gulp production"

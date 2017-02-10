@@ -4,6 +4,8 @@
 .idea/
 *.txt
 *.map
+.vscode/
+npm-debug.log
 node_modules/
 build/
 host.config.js

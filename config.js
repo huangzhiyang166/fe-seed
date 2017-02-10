@@ -11,11 +11,16 @@ module.exports = {
 		hash : false
 	},
 	proxy : {
-		"**": {
-			target : "http://www.12301.local/",
+		"/r/*": {
+			target : "http://localhost:8001/",
 			secure: false,
-			changeOrigin: true
+			changeOrigin: false
 		}
+	},
+	mockServer : {
+		port : "8001",
+		watch : true,
+		delay : 800
 	},
 	sftp : {
 		test : {
