@@ -1,4 +1,4 @@
-require("./index.scss");
+require("./index.css");
 
 var Main = {
 	init : function(){
