@@ -35,6 +35,6 @@
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
-    "pft-fe-components": "^1.0.0"
+    
   }
 }
