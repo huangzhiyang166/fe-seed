@@ -1,3 +1,4 @@
+var hostConfig = require("./hostConfig.js");
 module.exports = {
 	entry : "./src/index.js",
 	output : {
@@ -24,16 +25,16 @@ module.exports = {
 	},
 	sftp : {
 		test : {
-			username : "",
-			password : ""
+			username : hostConfig.test.username,
+			password : hostConfig.test.password
 		},
 		release : {
-			username : "",
-			password : ""
+			username : hostConfig.release.username,
+			password : hostConfig.release.password
 		},
 		production : {
-			username : "",
-			password : ""
+			username : hostConfig.production.username,
+			password : hostConfig.production.password
 		}
 	}
 }
