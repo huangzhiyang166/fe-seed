@@ -48,6 +48,9 @@ module.exports = function(env){
 				test : /\.less$/,
 				loader : ExtractTextPlugin.extract("style","css?sourceMap!cssnext!postcss!less")
 			},{
+				test : /\.sass|scss$/,
+				loader : ExtractTextPlugin.extract("style","css?sourceMap!cssnext!postcss!sass")
+			},{
 				test : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,loader : 'file-loader'
 			},{
 				test : /\.(png|jpe?g|gif)$/,loader : 'url-loader?limit=8192&name=images/[name]-[hash].[ext]'
