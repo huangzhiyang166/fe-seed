@@ -1,0 +1,12 @@
+*.log
+*.bak
+.hooks
+.idea/
+*.txt
+*.map
+.vscode/
+.DS_Store
+npm-debug.log
+node_modules/
+build/
+host.config.js
