@@ -7,8 +7,14 @@
     "server" : "json-server ./mock/db.json --config ./mock/mock.config.js --routes ./mock/routes.json",
     "start": "webpack-dev-server --port 8000 --progress --colors --config ./webpack.config.dev.js --inline",
     "test": "gulp test",
+    "test:css": "gulp test:css",
+    "test:js": "gulp test:js",
     "release": "gulp release",
-    "production": "gulp production"
+    "release:css": "gulp release:css",
+    "release:js": "gulp release:js",
+    "production": "gulp production",
+    "production:css": "gulp production:css",
+    "production:js": "gulp production:js"
   },
   "author": "huangzy",
   "license": "ISC",
