@@ -13,18 +13,18 @@ var path = require("path");
 
 var Util = {
 	/**
-	 * ÏÂÔØÖ¸¶¨ÎÄ¼şµ½±¾µØ
+	 * ä¸‹è½½æ–‡ä»¶
 	 * @param opt
-	 * opt.src      Ä¿±êÎÄ¼şµØÖ·                                      ±ØÌî
-	 * opt.output   ½«ÏÂÔØ³É¹¦ºóµÄÎÄ¼şÒª·Åµ½ÄÄ¸öÂ·¾¶ÏÂ£¬°üÀ¨Â·¾¶¼°ÎÄ¼şÃüÃû  ±ØÌî
-	 * opt.encoding ÎÄ¼ş×Ö·û±àÂë                                      ¿ÉÑ¡
-	 * callback     ÏÂÔØÍê³ÉÊ±µÄ»Øµ÷                                   ¿ÉÑ¡
+	 * opt.src      ç›®æ ‡æ–‡ä»¶srcåœ°å€                                  
+	 * opt.output	ä¸‹è½½åˆ°å“ªä¸ªç›®å½•ä¸‹
+	 * opt.encoding æŒ‡å®šæ–‡ä»¶æœ‰encoding
+	 * callback     å®Œæˆæ—¶å›è°ƒ
 	 */
 	download : function(opt){
 		var src = opt.src;
-		if(!src) throw new Error("È±ÉÙÏÂÔØµØÖ·");
+		if(!src) throw new Error("missing src");
 		var output = opt.output;
-		if(!output) throw new Error("È±ÉÙÎÄ¼ş´æ·ÅµØÖ·");
+		if(!output) throw new Error("missing output");
 		var callback = opt.callback || function(){};
 		var encoding = opt.encoding || "utf8";
 		request(src,function(err,res,body){
@@ -36,14 +36,14 @@ var Util = {
 		});
 	},
 	/**
-	 * ÉÏ´«Ö¸¶¨ÎÄ¼şµ½Ö¸¶¨·şÎñÆ÷
+	 * ä¸Šä¼ æŒ‡å®šæ–‡ä»¶åˆ°æŒ‡å®šè¿œç¨‹ç›®å½•
 	 * @param opt
-	 * opt.file          ´ıÉÏ´«ÎÄ¼şsrc         ±ØÌî
-	 * opt.host         Ô¶³ÌÖ÷»úµØÖ·          ±ØÌî
-	 * opt.port         ¶Ë¿ÚºÅ               ¿ÉÑ¡   Ä¬ÈÏ22
-	 * opt.user         µÇÂ¼Ô¶³ÌÖ÷»úµÄÓÃ»§Ãû   ±ØÌî
-	 * opt.password     µÇÂ¼Ô¶³ÌÖ÷»úµÄÃÜÂë     ±ØÌî
-	 * opt.remotePath   Ô¶³ÌÖ÷»úµÄÄÄ¸öÄ¿Â¼ÏÂ   ¿ÉÑ¡   Ä¬ÈÏ "./"
+	 * opt.file         ç›®æ ‡æ–‡ä»¶åœ¨ç¡¬ç›˜ä¸Šçš„åœ°å€
+	 * opt.host         è¿œç¨‹æœåŠ¡å™¨host
+	 * opt.port         ç«¯å£
+	 * opt.user         ç™»å½•ç”¨æˆ·å
+	 * opt.password     å¯†ç 
+	 * opt.remotePath   è¦ä¸Šä¼ è‡³è¿œç¨‹æœåŠ¡å™¨çš„å“ªä¸ªç›®å½•
 	 */
 	upload : function(opt){
 
