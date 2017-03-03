@@ -53,7 +53,7 @@ var upload = function(env,type){
 
 var Compile = function(env){
 	var envArr = env.split(":");
-	env = env[0];
+	env = envArr[0];
 	var type = envArr[1];
 	var output = getOutputDir(env);
 	var webpackConfig = getWebpackConfig(env);
