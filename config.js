@@ -1,4 +1,4 @@
-var hostConfig = require("./hostConfig.js");
+var hostConfig = require("./host.config.js");
 module.exports = {
 	entry : "./src/index.js",
 	output : {
