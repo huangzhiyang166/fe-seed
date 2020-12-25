@@ -1,2 +1,2 @@
-# pft-fe-template
-pft-fe-template
+# fe-template
+fe-template
